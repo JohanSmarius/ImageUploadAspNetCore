@@ -19,6 +19,7 @@ public class UserController : Controller
 
         var viewModel = new UserDisplayViewModel { Name = user.Name };
         viewModel.Picture = Convert.ToBase64String(user.Picture);
+        viewModel.PictureFormat = user.PictureFormat;
 
         return View(viewModel);
     }
@@ -46,7 +47,8 @@ public class UserController : Controller
 
         var user = new User
         {
-            Name = userViewModel.Name
+            Name = userViewModel.Name,
+            PictureFormat = userViewModel.Picture.ContentType
         };
 
         var memoryStream = new MemoryStream();

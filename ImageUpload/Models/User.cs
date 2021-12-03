@@ -11,4 +11,7 @@ public class User
 
     [Required]
     public byte[] Picture { get; set; }
+
+    [Required]
+    public string PictureFormat { get; set; }
 }
