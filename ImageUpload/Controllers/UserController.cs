@@ -48,6 +48,7 @@ public class UserController : Controller
         var user = new User
         {
             Name = userViewModel.Name,
+
             PictureFormat = userViewModel.Picture.ContentType
         };
 

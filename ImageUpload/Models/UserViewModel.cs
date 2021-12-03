@@ -4,10 +4,9 @@ namespace ImageUpload.Models;
 
 public class UserViewModel
 {
-    public int Id { get; set; }
-
     [Required]
     public string Name { get; set; }
 
+    [Required]
     public IFormFile Picture { get; set; }
 }
